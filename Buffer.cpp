@@ -42,11 +42,22 @@ int main()
     printf("\nPackets in order: "); 
     for (int i = 1; i <= n; i++) printf("%d ", i);
 
+    printf("\n\nReconstructed Message: ");
+    for (int i = 1; i <= n; i++) 
+    {
+        for (int j = 0; j < n; j++) 
+        {
+            if (p[j].id == i) 
+            {
+                printf("%s", p[j].t);
+                break;
+            }
+        }
+    }
+
+    printf("\n");
     free(p);
 }
-
-
-
 
 //Example
 // Msg: A computer network is a set of devices connected through links
